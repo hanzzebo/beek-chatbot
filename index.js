@@ -29,7 +29,7 @@ const sessions = new Map();
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static(new URL("public", import.meta.url).pathname));
 
 app.post("/api/chat", async (req, res) => {
   const { message, sessionId = "default" } = req.body;
