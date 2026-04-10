@@ -9,6 +9,7 @@
   const $sendBtn = document.getElementById("btn-send");
   const $clearBtn = document.getElementById("btn-clear");
   const $newChatBtn = document.getElementById("btn-new-chat");
+  const $closeChatBtn = document.getElementById("btn-close-chat");
   const $welcome = document.getElementById("welcome");
 
   // ── State ─────────────────────────────────────
@@ -558,6 +559,7 @@
 
   $clearBtn.addEventListener("click", clearChat);
   $newChatBtn.addEventListener("click", toggleHistory);
+  $closeChatBtn.addEventListener("click", toggleChat);
 
   // Quick prompts
   document.querySelectorAll(".cb-quick").forEach((btn) => {
